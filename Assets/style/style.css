@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1: #00522e;
+    --color2: #372e1d;
+    --color3: #ce9f69;
+    --color4: #fafafa;
+    --color5: #6f3df4;
+    --color6: #f2c335;
+    --color7: #191641;
+}
+/* Animations */
+@keyframes load{
+    from{
+        font-size: 0em;
+    }
+    to{
+        font-size: 2em;
+    }
+}
+@keyframes Load{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* Index Page */
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color5);
+}
+main #box1{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color4);
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+}
+main #box1 h1 a{
+    text-decoration: none;
+    color: var(--color6);
+    animation: load 1s ease 1;
+    font-size: 2em;
+    transition: all 1s ease;
+}
+main #box1 h1 a:hover{
+    text-shadow: var(--color3) 20px 0 15px;
+}
+main #box2{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main #box2 button{
+    width: 10%;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--color6);
+    color: var(--color4);
+    font-size: 1.2em;
+    animation: Load 1.5s ease 1;
+    transition: all ease 1s;
+    border: 0px;
+}
+main #box2 button:hover{
+    cursor: pointer;
+    background-color: var(--color4);
+    color: var(--color6);
+}
+main #box3{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #box4{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color4);
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+}
+main #box4 h1 a{
+    text-decoration: none;
+    color: var(--color6);
+    font-size: 2em;
+    transition: all 1s ease;
+}
+main #box4 h1 a:hover{
+    text-shadow: var(--color3) 20px 0 15px;
+}
+main #box5{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+main #box5 ol{
+    list-style: circle;
+}
+main #box5 ol li{
+    margin: 10px 0px;
+    font-size: 1.2em;
+}
+main #box6{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main #box6 button{
+    margin: 0px 50px;
+    width: 10%;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    background-color: var(--color6);
+    color: var(--color4);
+    font-size: 1.2em;
+    transition: all 1s ease;
+    border: 0px;
+}
+main #box6 button:hover{
+    background-color: var(--color4);
+    color: var(--color6);
+    cursor: pointer;
+}
+main #box6 #back{
+    border-radius: 20px 0px 0px 20px;
+}
+main #box6 #next{
+    border-radius: 0px 20px 20px 0px;
+}
+main #box7{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    background-color: var(--color4);
+    border-radius: 0 0 25px 25px;
+    overflow: hidden;
+}
+main #box7 #daba2{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #box7 #daba2 h1 a{
+    text-decoration: none;
+    color: var(--color6);
+    font-size: 2em;
+    transition: all 1s ease;
+}
+main #box7 #daba2 h1 a:hover{
+    text-shadow: var(--color3) 20px 0 15px;
+}
+main #box7 #daba1, main #box7 #daba3{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #box8{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main #box8 #game{
+    width: 80%;
+    height: 80%;
+    background-color: var(--color4);
+    z-index: 1;
+}
+main #box8 #scorebox{
+    width: 80%;
+    height: 60%;
+    background-color: var(--color5);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main #box8 #scorebox button{
+    margin: 15px 0px;
+    width: 10%;
+    padding: 10px;
+    background-color: var(--color6);
+    color: var(--color4);
+    border-radius: 15px;
+    transition: all 1s ease;
+    border: 0;
+}
+main #box8 #scorebox button:hover{
+    background-color: var(--color4);
+    color: var(--color6);
+}
+main #box9{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+main #box9 button{
+    width: 20%;
+    height: 80%;
+    background-color: var(--color6);
+    color: var(--color4);
+    font-size: 1.03em;
+    border-radius: 90px;
+    border: 0;
+    transition: all 1s ease;
+}
+main #box9 button:hover{
+    background-color: var(--color4);
+    color: var(--color6);
+}
