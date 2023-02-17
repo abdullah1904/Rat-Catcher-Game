@@ -192,6 +192,23 @@ main #box8 #game{
     height: 80%;
     background-color: var(--color4);
     z-index: 1;
+    overflow: hidden;
+}
+main #box8 #game img{
+    width: 2%;
+    position: relative;
+}
+main #box8 #game #rat1, main #box8 #game #rat2, main #box8 #game #rat3, main #box8 #game #rat4, main #box8 #game #rat5,main #box8 #game #rat6, main #box8 #game #rat7,main #box8 #game #rat8,main #box8 #game #rat9,main #box8 #game #rat10, main #box8 #game #rat11, main #box8 #game #rat12, main #box8 #game #rat13 ,main #box8 #game #rat14, main #box8 #game #rat15, main #box8 #game #rat16, main #box8 #game #rat17, main #box8 #game #rat18, main #box8 #game #rat19, main #box8 #game #rat20{
+    visibility: visible;
+}
+main #box8 #game #rat21, main #box8 #game #rat22, main #box8 #game #rat23, main #box8 #game #rat24, main #box8 #game #rat25,main #box8 #game #rat26, main #box8 #game #rat27,main #box8 #game #rat28,main #box8 #game #rat29,main #box8 #game #rat30, main #box8 #game #rat31, main #box8 #game #rat32, main #box8 #game #rat33 ,main #box8 #game #rat34, main #box8 #game #rat35, main #box8 #game #rat36, main #box8 #game #rat37, main #box8 #game #rat38, main #box8 #game #rat39, main #box8 #game #rat40{
+    visibility: hidden;
+}
+main #box8 #game #rat41, main #box8 #game #rat42, main #box8 #game #rat43, main #box8 #game #rat44, main #box8 #game #rat45,main #box8 #game #rat46, main #box8 #game #rat47,main #box8 #game #rat48,main #box8 #game #rat49,main #box8 #game #rat50, main #box8 #game #rat51, main #box8 #game #rat52, main #box8 #game #rat53 ,main #box8 #game #rat54, main #box8 #game #rat55, main #box8 #game #rat56, main #box8 #game #rat57, main #box8 #game #rat58, main #box8 #game #rat59, main #box8 #game #rat60{
+    visibility: hidden;
+}
+main #box8 #game #rat1, main #box8 #game #rat2, main #box8 #game #rat3, main #box8 #game #rat4, main #box8 #game #rat5,main #box8 #game #rat11, main #box8 #game #rat12, main #box8 #game #rat13, main #box8 #game #rat14, main #box8 #game #rat15 ,main #box8 #game #rat21, main #box8 #game #rat22, main #box8 #game #rat23, main #box8 #game #rat24, main #box8 #game #rat25, main #box8 #game #rat31, main #box8 #game #rat32, main #box8 #game #rat33, main #box8 #game #rat34, main #box8 #game #rat35,main #box8 #game #rat41, main #box8 #game #rat42, main #box8 #game #rat43, main #box8 #game #rat44, main #box8 #game #rat45,main #box8 #game #rat51, main #box8 #game #rat52, main #box8 #game #rat53, main #box8 #game #rat54, main #box8 #game #rat55{
+    transform: rotateY(180deg);
 }
 main #box8 #scorebox{
     width: 80%;
