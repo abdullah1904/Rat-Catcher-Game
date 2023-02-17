@@ -1,17 +1,5 @@
 // Game Page
-var quit = document.getElementById("quit");
-var timer = document.getElementById("timer");
-var gamebox = document.getElementById("game");
-var scorebox = document.getElementById("scorebox");
-var restart = document.getElementById("restart");
-var gotohome = document.getElementById("gthome");
-var scored = document.getElementById("score");
-var tscore = document.getElementById("scorevalue");
-var time = 60;
-var turn = 1;
-var score = 00;
-// Rats
-let rat = document.querySelectorAll(".rat");
+// DOM For Rats
 let rat1 = document.getElementById("rat1");
 let rat2 = document.getElementById("rat2");
 let rat3 = document.getElementById("rat3");
@@ -72,22 +60,36 @@ let rat57 = document.getElementById("rat57");
 let rat58 = document.getElementById("rat58");
 let rat59 = document.getElementById("rat59");
 let rat60 = document.getElementById("rat60");
+// DOM For Game Page Score and timer
+var quit = document.getElementById("quit");
+var timer = document.getElementById("timer");
+var gamebox = document.getElementById("game");
+var scorebox = document.getElementById("scorebox");
+var restart = document.getElementById("restart");
+var gotohome = document.getElementById("gthome");
+var scored = document.getElementById("score");
+var tscore = document.getElementById("scorevalue");
+// Variables
+var time = 60;
+var turn = 1;
+var score = 00;
 // --Main Part--
-// convert rats into array
-let rats = new Array();
-for(let i = 0; i<60;i++){
-    let x = i + 1;
-    rats[i] = document.getElementById("rat" + x);
+// Function
+function change(){
+    for(let i = 1; i<=60; i++){
+        let positionT = Math.floor(Math.random() * 50);
+        let postionL = Math.floor(Math.random() * 50);
+        document.getElementById("rat" + i).style.top = positionT + "%";
+        document.getElementById("rat" + i).style.left = postionL + "%";
+    }
+}
+function back(){
+    history.back();
+    history.back();
 }
 // Button Functions
-quit.addEventListener('click', ()=>{
-    history.back();
-    history.back();
-});
-gotohome.addEventListener('click' , ()=>{
-    history.back();
-    history.back();
-});
+quit.addEventListener('click', back);
+gotohome.addEventListener('click' , back);
 restart.addEventListener('click' , ()=>{
     window.open("game.html", "_parent");
 })
@@ -105,14 +107,7 @@ setInterval(()=>{
         time--;
     }
 }, 1000);
-setTimeout(()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-}, 1);
+setTimeout(change, 1);
 setInterval(()=>{
     for(let i = 1; i<=60; i++){
         let positionT = Math.floor(Math.random() * 50);
@@ -439,440 +434,161 @@ rat1.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat1.style.display = "none";
+    rat1.style.visibility = "hidden";
 });
 rat4.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat4.style.display = "none";
+    rat4.style.visibility = "hidden";
 })
 rat7.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat7.style.display = "none";
+    rat7.style.visibility = "hidden";
 })
 rat10.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat10.style.display = "none";
+    rat10.style.visibility = "hidden";
 })
 rat13.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat13.style.display = "none";
+    rat13.style.visibility = "hidden";
 })
 rat16.addEventListener('click', ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat16.style.display = "none";
+    rat16.style.visibility = "hidden";
 })
 rat19.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat19.style.display = "none";
+    rat19.style.visibility = "hidden";
 })
 rat22.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat22.style.display = "none";
+    rat22.style.visibility = "hidden";
 })
 rat25.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat25.style.display = "none";
+    rat25.style.visibility = "hidden";
 })
 rat28.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat28.style.display = "none";
+    rat28.style.visibility = "hidden";
 })
 rat31.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat31.style.display = "none";
+    rat31.style.visibility = "hidden";
 })
 rat34.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat34.style.display = "none";
+    rat34.style.visibility = "hidden";
 })
 rat37.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat37.style.display = "none";
+    rat37.style.visibility = "hidden";
 })
 rat40.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat40.style.display = "none";
+    rat40.style.visibility = "hidden";
 })
 rat43.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat43.style.display = "none";
+    rat43.style.visibility = "hidden";
 })
 rat46.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat46.style.display = "none";
+    rat46.style.visibility = "hidden";
 })
 rat49.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat49.style.display = "none";
+    rat49.style.visibility = "hidden";
 })
 rat52.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat52.style.display = "none";
+    rat52.style.visibility = "hidden";
 })
 rat55.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat55.style.display = "none";
+    rat55.style.visibility = "hidden";
 })
 rat58.addEventListener('click' , ()=>{
     score++;
     scored.innerText = score;
     tscore.innerText = score;
-    rat58.style.display = "none";
+    rat58.style.visibility = "hidden";
 })
-    // 3,6,9,12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60 for change on click (20)
-rat3.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat6.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat9.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat12.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat15.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat18.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat21.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat14.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat27.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat30.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat33.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat36.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat39.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat42.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat45.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat48.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat51.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat54.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat57.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat60.addEventListener('click' , ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat2.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat5.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat8.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat11.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat14.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat17.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat20.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat23.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat26.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat29.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat32.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat35.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat38.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat41.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat44.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat47.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat50.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat53.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat56.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
-rat59.addEventListener('mouseenter', ()=>{
-    for(let i = 1; i<=60; i++){
-        let positionT = Math.floor(Math.random() * 50);
-        let postionL = Math.floor(Math.random() * 50);
-        document.getElementById("rat" + i).style.top = positionT + "%";
-        document.getElementById("rat" + i).style.left = postionL + "%";
-    }
-})
+// Rats Who cause change on click
+rat3.addEventListener('click' , change)
+rat6.addEventListener('click' , change)
+rat9.addEventListener('click' , change)
+rat12.addEventListener('click', change)
+rat15.addEventListener('click', change)
+rat18.addEventListener('click' , change)
+rat21.addEventListener('click' , change)
+rat14.addEventListener('click' , change)
+rat27.addEventListener('click' , change)
+rat30.addEventListener('click' , change)
+rat33.addEventListener('click' , change)
+rat36.addEventListener('click' , change)
+rat39.addEventListener('click' , change)
+rat42.addEventListener('click' , change)
+rat45.addEventListener('click' , change)
+rat48.addEventListener('click' , change)
+rat51.addEventListener('click' , change)
+rat54.addEventListener('click' , change)
+rat57.addEventListener('click' , change)
+rat60.addEventListener('click' , change)
+// Rats who cause change when mouse enter on them
+rat2.addEventListener('mouseenter', change)
+rat5.addEventListener('mouseenter', change)
+rat8.addEventListener('mouseenter', change)
+rat11.addEventListener('mouseenter', change)
+rat14.addEventListener('mouseenter', change)
+rat17.addEventListener('mouseenter', change)
+rat20.addEventListener('mouseenter', change)
+rat23.addEventListener('mouseenter', change)
+rat26.addEventListener('mouseenter', change)
+rat29.addEventListener('mouseenter', change)
+rat32.addEventListener('mouseenter', change)
+rat35.addEventListener('mouseenter', change)
+rat38.addEventListener('mouseenter', change)
+rat41.addEventListener('mouseenter', change)
+rat44.addEventListener('mouseenter', change)
+rat47.addEventListener('mouseenter', change)
+rat50.addEventListener('mouseenter', change)
+rat53.addEventListener('mouseenter', change)
+rat56.addEventListener('mouseenter', change)
+rat59.addEventListener('mouseenter', change)
